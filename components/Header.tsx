@@ -14,79 +14,16 @@ export default function Header() {
     {
       title: 'Home',
       href: '/',
-      dropdown: [
-        { title: 'Home One', href: '/' },
-        { title: 'Home Two', href: '/index-2' },
-        { title: 'Home Three', href: '/index-3' },
-        { title: 'Home Four', href: '/index-4' },
-        { title: 'Home Five', href: '/index-5' },
-      ]
+     
     },
     {
       title: 'About Us',
       href: '/about',
     },
+    
     {
-      title: 'Services',
-      href: '/services',
-      dropdown: [
-        { title: 'Services', href: '/services' },
-        { title: 'Services Two', href: '/services-2' },
-        { title: 'Service Details', href: '/services-details' },
-      ]
-    },
-    {
-      title: 'Project',
-      href: '/projects',
-      dropdown: [
-        { title: 'Project', href: '/projects' },
-        { title: 'Project Details', href: '/projects-details' },
-      ]
-    },
-    {
-      title: 'Pages',
-      href: '#',
-      dropdown: [
-        { title: "FAQ's", href: '/faq' },
-        { title: 'Error Page', href: '/404' },
-        {
-          title: 'Shop Page',
-          href: '/shop',
-          submenu: [
-            { title: 'Pricing', href: '/pricing' },
-            { title: 'Shop Page', href: '/shop' },
-            { title: 'Shop Details', href: '/shop-details' },
-            { title: 'Cart Page', href: '/cart' },
-            { title: 'Check Out', href: '/checkout' },
-          ]
-        },
-        {
-          title: 'Testimonial',
-          href: '/testimonials',
-          submenu: [
-            { title: 'Testimonial One', href: '/testimonials' },
-            { title: 'Testimonial Two', href: '/testimonials-2' },
-          ]
-        },
-        {
-          title: 'Our Team',
-          href: '/team',
-          submenu: [
-            { title: 'Our Team', href: '/team' },
-            { title: 'Team Details', href: '/team-details' },
-          ]
-        },
-      ]
-    },
-    {
-      title: 'News',
-      href: '#',
-      dropdown: [
-        { title: 'Blog Grid', href: '/blog-grid' },
-        { title: 'Blog Standard', href: '/blog-standard' },
-        { title: 'Blog Details', href: '/blog-details' },
-        { title: 'Blog Details Two', href: '/blog-details-2' },
-      ]
+      title: 'FAQ',
+      href: '/faq',
     },
     {
       title: 'Contact Us',
