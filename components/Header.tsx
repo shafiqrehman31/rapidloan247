@@ -239,11 +239,8 @@ export default function Header() {
                 </nav>
               </div>
               <div className="header_right_content">
-                <button className="search-toggler">
-                  <i className="icon-50"></i>
-                </button>
                 <div className="link-btn">
-                  <Link href="#" className="btn_style_one">Get Started</Link>
+                  <Link href="#" className="btn_style_one">Get Loan</Link>
                 </div>
               </div>
             </div>
@@ -269,11 +266,9 @@ export default function Header() {
                 </nav>
               </div>
               <div className="header_right_content">
-                <button className="search-toggler">
-                  <i className="icon-50"></i>
-                </button>
+
                 <div className="link-btn">
-                  <Link href="#" className="btn_style_one">Get Started</Link>
+                  <Link href="#" className="btn_style_one">Get Loan</Link>
                 </div>
               </div>
             </div>

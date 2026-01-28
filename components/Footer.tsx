@@ -4,18 +4,15 @@ import { FooterLink } from '@/types';
 export default function Footer() {
   const pagesLinks: FooterLink[] = [
     { title: 'About us', href: '/about' },
-    { title: 'Blogs', href: '/blog' },
     { title: 'FAQ\'s', href: '/faq' },
     { title: 'Contact', href: '/contact' },
-    { title: 'Support', href: '/support' },
   ];
 
   const primaryPagesLinks: FooterLink[] = [
-    { title: 'Services', href: '/services' },
-    { title: 'Careers', href: '/careers' },
-    { title: 'Pricing Plans', href: '/pricing' },
-    { title: 'Portfolio', href: '/projects' },
-    { title: 'News', href: '/blog' },
+    { title: 'Terms and Conditions', href: '/terms' },
+    { title: 'Privacy Policy', href: '/privacy' },
+    { title: 'California Privacy Notice', href: '/california-privacy' },
+    { title: 'Before you Apply', href: '/before-you-apply' },
   ];
 
   return (
@@ -55,8 +52,8 @@ export default function Footer() {
                 data-aos-easing="linear" 
                 data-aos-duration="550"
               >
-                <h4 className="footer_widget_title">Pages</h4>
-                <ul className="page_list">
+                <h4 className="footer_widget_title">Quick Links</h4>
+                <ul className="primary_page_list">
                   {pagesLinks.map((link, index) => (
                     <li key={index}>
                       <Link href={link.href}>{link.title}</Link>
@@ -73,7 +70,7 @@ export default function Footer() {
                 data-aos-easing="linear" 
                 data-aos-duration="600"
               >
-                <h4 className="footer_widget_title">Primary Pages</h4>
+                <h4 className="footer_widget_title">Importance Links</h4>
                 <ul className="primary_page_list">
                   {primaryPagesLinks.map((link, index) => (
                     <li key={index}>
@@ -91,25 +88,20 @@ export default function Footer() {
                 data-aos-easing="linear" 
                 data-aos-duration="650"
               >
-                <h4 className="footer_widget_title">Subscribe Newsletter</h4>
+                <h4 className="footer_widget_title">Get In Touch</h4>
+
+                <div>
+                  
+                    Address: ert 567 ntrgyuhf, 5675 <br></br>
+                    Email: <Link href="mailto:info@rapidloan247.com">Info@rapidloan247.com</Link> <br></br>
                 <p>
-                  To add complexity, this is happening against a back drop of 
-                  significant challenges
+                <br></br>
+                  Rapid Loan 24/7 is a trading style of Name Limited company registered in name and name .
                 </p>
-                <div className="subscribe-inner">
-                  <form action="/contact" method="post" className="subscribe-form">
-                    <div className="form-group">
-                      <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email Address" 
-                        required 
-                      />
-                      <button type="submit" className="btn_style_one">
-                        Subscribe
-                      </button>
-                    </div>
-                  </form>
+
+                      
+                  
+                  
                 </div>
               </div>
             </div>
@@ -121,7 +113,7 @@ export default function Footer() {
         <div className="container">
           <div className="copyright">
             Copyright &copy; {new Date().getFullYear()} &nbsp;
-            <Link href="/">Financer</Link>
+            <Link href="/">RapidLoan24/7</Link>
             , Inc. All Rights Reserved
           </div>
         </div>

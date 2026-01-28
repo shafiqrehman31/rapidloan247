@@ -7,7 +7,6 @@ import Preloader from '@/components/Preloader'
 import SearchPopup from '@/components/SearchPopup'
 import ScrollToTop from '@/components/ScrollToTop'
 
-// Load fonts
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -56,6 +55,9 @@ export default function RootLayout({
         {/* Google Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        
+        {/* AOS CSS */}
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
       </head>
       <body className="boxed_wrapper">
         <Preloader />
@@ -64,9 +66,8 @@ export default function RootLayout({
         {children}
         <Footer />
         
-        {/* Scroll to Top Button */}
-           <ScrollToTop />
-
+        <ScrollToTop />
+        
         {/* JavaScript Files */}
         <script src="/assets/js/bootstrap.js" defer></script>
         <script src="/assets/js/jquery.js" defer></script>
@@ -82,6 +83,24 @@ export default function RootLayout({
         <script src="/assets/js/jquery.bootstrap-touchspin.js" defer></script>
         <script src="/assets/js/aos.js" defer></script>
         <script src="/assets/js/main.js" defer></script>
+        
+        {/* Initialize AOS - CORRECT WAY */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('DOMContentLoaded', function() {
+                if (typeof AOS !== 'undefined') {
+                  AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                    disable: window.innerWidth < 768
+                  });
+                }
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   )
