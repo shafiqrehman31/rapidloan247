@@ -9,20 +9,20 @@ export default function WorkProcessSection() {
   const steps: ProcessStep[] = [
     {
       id: 1,
-      title: 'Step 1: Create Account',
-      description: 'Easily create your Zaplin account with one click and get 100 Million Tokens',
+      title: 'Step 1: Apply Online',
+      description: 'Fill out our quick and secure loan request form no paper work, no long forms.',
       icon: 'icon-35'
     },
     {
       id: 2,
-      title: 'Step 2: Type Context',
-      description: 'Easily create your Zaplin account with one click and get 100 Million Tokens',
+      title: 'Step 2: Review & Verification',
+      description: 'Your details are reviewed to ensure accuracy and a smooth approval process',
       icon: 'icon-36'
     },
     {
       id: 3,
-      title: 'Step 3: Get Images',
-      description: 'Easily create your Zaplin account with one click and get 100 Million Tokens',
+      title: 'Step 3: Get Approved',
+      description: 'Once verified, receive a loan decision quickly without unnecessary delays.',
       icon: 'icon-37'
     }
   ];

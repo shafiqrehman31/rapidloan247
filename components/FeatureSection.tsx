@@ -13,20 +13,20 @@ export default function FeatureSection() {
   const [accordionItems, setAccordionItems] = useState<AccordionItem[]>([
     {
       id: 1,
-      title: '1. Improve operational performance',
-      content: 'More than of the public reviews by our users mention amazing and super fast customer support as one of our',
+      title: 'Who We Are',
+      content: 'Rapid Loan 24/7 is a trusted platform focused on helping individuals access loan options quickly and conveniently. We prioritize simplicity, transparency, and secure processes to make borrowing easier and more accessible for everyone.',
       isActive: false
     },
     {
       id: 2,
-      title: '2. Focus on core competencies',
-      content: 'More than of the public reviews by our users mention amazing and super fast customer support as one of our',
+      title: 'Our Mission & Values',
+      content: 'Our mission is to remove the stress and confusion from borrowing. We believe in clear information, honest guidance, and responsible connections—so users can make informed financial decisions with confidence.',
       isActive: false
     },
     {
       id: 3,
-      title: '3. Go to market quickly',
-      content: 'More than of the public reviews by our users mention amazing and super fast customer support as one of our',
+      title: 'How We Help You',
+      content: 'Whether you’re facing an unexpected expense or need short-term financial support, Rapid Loan 24/7 connects you with loan solutions that match your situation. Our streamlined process helps you move forward without delays or unnecessary complications.',
       isActive: true
     }
   ]);
@@ -77,9 +77,12 @@ export default function FeatureSection() {
             >
               <div className="section_title">
                 <div className="tag_text">
-                  <h6>Features</h6>
+                  <h6>About Us</h6>
                 </div>
-                <h2>The Specialists in fund administration</h2>
+                <h2>About Rapid Loan 24/7</h2><br></br>
+                
+                <p>Rapid Loan 24/7 is dedicated to helping individuals access loan options quickly and conveniently. We focus on simplicity, transparency, and security making the borrowing process easier for people facing everyday financial needs.</p>
+                <br></br>
               </div>
               <ul className="accordion_box">
                 {accordionItems.map((item, index) => (

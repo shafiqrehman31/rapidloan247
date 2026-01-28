@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { MenuItem } from '@/types';
 
 export default function Header() {
+  const pathname = usePathname(); // Get current route
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
@@ -14,13 +16,11 @@ export default function Header() {
     {
       title: 'Home',
       href: '/',
-     
     },
     {
       title: 'About Us',
-      href: '/about',
+      href: '/about-us',
     },
-    
     {
       title: 'FAQ',
       href: '/faq',
@@ -30,6 +30,17 @@ export default function Header() {
       href: '/contact',
     },
   ];
+
+  // Function to check if a menu item is active
+  const isMenuItemActive = (href: string) => {
+    // For exact match (like Home page)
+    if (href === '/' && pathname === '/') {
+      return true;
+    }
+    // For other pages, check if pathname starts with href
+    // This helps with nested routes if you have them
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   // Sticky header effect
   useEffect(() => {
@@ -87,36 +98,39 @@ export default function Header() {
   // Render desktop menu
   const renderDesktopMenu = () => (
     <ul className="navigation">
-      {menuItems.map((item, index) => (
-        <li 
-          key={index} 
-          className={`${item.dropdown ? 'dropdown ' : ''}${index === 0 ? ' active' : ''}`}
-        >
-          <Link href={item.href}>{item.title}</Link>
-          {item.dropdown && (
-            <ul>
-              {item.dropdown.map((subItem, subIndex) => (
-                <li key={subIndex} className={subItem.submenu ? 'dropdown' : ''}>
-                  {subItem.submenu ? (
-                    <>
+      {menuItems.map((item, index) => {
+        const isActive = isMenuItemActive(item.href);
+        return (
+          <li 
+            key={index} 
+            className={`${item.dropdown ? 'dropdown ' : ''}${isActive ? ' active' : ''}`}
+          >
+            <Link href={item.href}>{item.title}</Link>
+            {item.dropdown && (
+              <ul>
+                {item.dropdown.map((subItem, subIndex) => (
+                  <li key={subIndex} className={subItem.submenu ? 'dropdown' : ''}>
+                    {subItem.submenu ? (
+                      <>
+                        <a href={subItem.href}>{subItem.title}</a>
+                        <ul>
+                          {subItem.submenu.map((nestedItem, nestedIndex) => (
+                            <li key={nestedIndex}>
+                              <a href={nestedItem.href}>{nestedItem.title}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
                       <a href={subItem.href}>{subItem.title}</a>
-                      <ul>
-                        {subItem.submenu.map((nestedItem, nestedIndex) => (
-                          <li key={nestedIndex}>
-                            <a href={nestedItem.href}>{nestedItem.title}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <a href={subItem.href}>{subItem.title}</a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 
@@ -126,11 +140,12 @@ export default function Header() {
       {menuItems.map((item, index) => {
         const itemKey = `mobile-menu-${index}`;
         const isDropdownActive = activeMobileDropdown === itemKey;
+        const isActive = isMenuItemActive(item.href);
         
         return (
           <li 
             key={index} 
-            className={`mobile-menu-item ${item.dropdown ? 'has-dropdown ' : ''}${isDropdownActive ? 'active' : ''}`}
+            className={`mobile-menu-item ${item.dropdown ? 'has-dropdown ' : ''}${isDropdownActive ? 'active' : ''}${isActive ? ' current' : ''}`}
           >
             {item.dropdown ? (
               <div 
@@ -145,7 +160,7 @@ export default function Header() {
             ) : (
               <Link 
                 href={item.href} 
-                className="mobile-menu-link"
+                className={`mobile-menu-link ${isActive ? 'current' : ''}`}
                 onClick={closeMobileMenu}
               >
                 {item.title}
@@ -157,11 +172,12 @@ export default function Header() {
                 {item.dropdown.map((subItem, subIndex) => {
                   const submenuKey = `${itemKey}-${subIndex}`;
                   const isSubmenuActive = activeMobileSubmenu === submenuKey;
+                  const isSubItemActive = isMenuItemActive(subItem.href);
                   
                   return (
                     <li 
                       key={subIndex} 
-                      className={`mobile-dropdown-item ${subItem.submenu ? 'has-submenu ' : ''}${isSubmenuActive ? 'active' : ''}`}
+                      className={`mobile-dropdown-item ${subItem.submenu ? 'has-submenu ' : ''}${isSubmenuActive ? 'active' : ''}${isSubItemActive ? ' current' : ''}`}
                     >
                       {subItem.submenu ? (
                         <>
@@ -177,24 +193,30 @@ export default function Header() {
                           
                           {isSubmenuActive && subItem.submenu && (
                             <ul className="mobile-submenu">
-                              {subItem.submenu.map((nestedItem, nestedIndex) => (
-                                <li key={nestedIndex} className="mobile-submenu-item">
-                                  <Link 
-                                    href={nestedItem.href} 
-                                    className="mobile-submenu-link"
-                                    onClick={closeMobileMenu}
+                              {subItem.submenu.map((nestedItem, nestedIndex) => {
+                                const isNestedActive = isMenuItemActive(nestedItem.href);
+                                return (
+                                  <li 
+                                    key={nestedIndex} 
+                                    className={`mobile-submenu-item ${isNestedActive ? 'current' : ''}`}
                                   >
-                                    {nestedItem.title}
-                                  </Link>
-                                </li>
-                              ))}
+                                    <Link 
+                                      href={nestedItem.href} 
+                                      className={`mobile-submenu-link ${isNestedActive ? 'current' : ''}`}
+                                      onClick={closeMobileMenu}
+                                    >
+                                      {nestedItem.title}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           )}
                         </>
                       ) : (
                         <Link 
                           href={subItem.href} 
-                          className="mobile-dropdown-link"
+                          className={`mobile-dropdown-link ${isSubItemActive ? 'current' : ''}`}
                           onClick={closeMobileMenu}
                         >
                           {subItem.title}
@@ -240,7 +262,7 @@ export default function Header() {
               </div>
               <div className="header_right_content">
                 <div className="link-btn">
-                  <Link href="#" className="btn_style_one">Get Loan</Link>
+                  <Link href="/contact" className="btn_style_one">Get Loan</Link>
                 </div>
               </div>
             </div>
@@ -266,9 +288,8 @@ export default function Header() {
                 </nav>
               </div>
               <div className="header_right_content">
-
                 <div className="link-btn">
-                  <Link href="#" className="btn_style_one">Get Loan</Link>
+                  <Link href="/contact" className="btn_style_one">Get Loan</Link>
                 </div>
               </div>
             </div>

@@ -16,29 +16,29 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      content: "The great benefit of audio is that it's the cost effective way for your brand to the create compelling content. You don't need an entire production crew and tons of expensive equipment",
-      author: "John Smith",
+      content: "The application was quick and easy, and I didn’t feel overwhelmed at any step. I got the funds when I really needed them, and everything was clearly explained.",
+      author: "Daniel W",
       title: "CEO, TechCorp",
       rating: 5
     },
     {
       id: 2,
-      content: "Working with this team has transformed our financial strategy. Their insights and dedication are unparalleled in the industry.",
-      author: "Sarah Johnson",
+      content: "I wasn’t sure what to expect, but the process turned out to be very smooth. The loan helped me cover an unexpected expense without stress.",
+      author: "Melissa H.",
       title: "Finance Director, Global Inc",
       rating: 5
     },
     {
       id: 3,
-      content: "The results speak for themselves. Our investment portfolio has grown by 35% since partnering with them.",
-      author: "Michael Chen",
+      content: "What I liked most was how simple everything was. No confusing steps, no surprises, and the money showed up fast.",
+      author: "Robert K.",
       title: "Investment Manager, WealthBuild",
       rating: 5
     },
     {
       id: 4,
-      content: "Exceptional service and outstanding results. The team was professional and helped us achieve our financial goals.",
-      author: "Robert Williams",
+      content: "I’ve used online loan services before, but this one felt more straightforward. I always knew what was happening and what my repayment looked like.",
+      author: "Angela P.",
       title: "Business Owner, SuccessCo",
       rating: 5
     }
@@ -119,8 +119,8 @@ export default function TestimonialsSection() {
           <div className="tag_text">
             <h6>Testimonials</h6>
           </div>
-          <h2>Love from Our Clients</h2>
-          <p className="section_subtitle">What our clients say about our services</p>
+          <h2>What People Are Saying</h2>
+          <p className="section_subtitle">See how Rapid Loan 24/7 made borrowing simple and stress-free</p>
         </div>
         
         {/* Testimonials in a Row */}
@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
                 <div className="testimonial_author">
                   <div className="author_details">
                     <h4 className="author_name">{testimonial.author}</h4>
-                    <span className="author_title">{testimonial.title}</span>
+                    
                   </div>
                 </div>
               </div>

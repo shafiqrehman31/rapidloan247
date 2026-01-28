@@ -3,20 +3,20 @@ import { Service } from '@/types';
 export default function WhyChooseUsSection() {
   const features: Service[] = [
     {
-      title: 'Expert Consultant',
-      description: 'Duis aute irure dolor in velit onerepreh enderit in voluptate more esse',
+      title: 'Fast & Easy Process',
+      description: 'Apply online in minutes with a straightforward form designed to save your time.',
       icon: 'icon-28',
       link: '#'
     },
     {
-      title: 'Worldpay Solutions',
-      description: 'Duis aute irure dolor in velit onerepreh enderit in voluptate more esse',
+      title: 'Clear Loan Terms',
+      description: 'All details are shown upfront so you know exactly what you’re agreeing to.',
       icon: 'icon-27',
       link: '#'
     },
     {
-      title: 'Innovative Fintech',
-      description: 'Duis aute irure dolor in velit onerepreh enderit in voluptate more esse',
+      title: 'Secure Information Handling',
+      description: 'Your personal and financial information is protected using modern security standards.',
       icon: 'icon-26',
       link: '#'
     }
@@ -32,7 +32,10 @@ export default function WhyChooseUsSection() {
           <div className="tag_text">
             <h6>Why Choose us</h6>
           </div>
-          <h2>We are the best in Market</h2>
+          <h2>Why Borrowers Trust Rapid Loan 24/7</h2><br></br>
+          <p  className="section_subtitle">
+          We’re built for speed, simplicity, and peace of mind. Our platform is designed to help everyday borrowers access loans without unnecessary complications.
+          </p>
         </div>
         <div className="row">
           {features.map((feature, index) => (

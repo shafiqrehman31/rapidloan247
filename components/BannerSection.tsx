@@ -11,22 +11,21 @@ export default function BannerSection() {
               data-aos-duration="500"
             >
               <div className="tag_text">
-                <h6>Consultant</h6>
+                <h6>Rapid Loan 24/7</h6>
               </div>
               <h1>
-                Smarter Investing, <br />
-                Brilliantly Spending
+                Loans Available <br />
+                $100 – $5,000,
               </h1>
               <p>
-                Establish your vision and value proposition and turn them <br />
-                into testable prototypes.
+               Quick access to funds for everyday needs, emergencies, or unexpected expenses.
               </p>
               <div className="subscribe-inner">
                 <form action="/contact" method="post" className="subscribe-form">
                   <div className="form-group">
                     <input type="email" name="email" placeholder="Enter your email" />
                     <button type="submit" className="btn_style_one">
-                      Get Started
+                      Get Loan
                     </button>
                   </div>
                 </form>
@@ -55,8 +54,8 @@ export default function BannerSection() {
                   </div>
                   <div className="income_chart float-bob-y">
                     <div className="title_box">
-                      <h6>Total Income</h6>
-                      <div className="rate">$ 18532.52</div>
+                      <h6>Total Loan Issued</h6>
+                      <div className="rate">$ 58532.52</div>
                     </div>
                     <div className="percentage">
                       <i className="fa-solid fa-arrow-trend-up"></i> +11%
