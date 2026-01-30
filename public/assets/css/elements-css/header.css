@@ -935,7 +935,7 @@ nav.main-menu {
     text-align: center;
     font-size: 16px;
     line-height: 32px;
-    color: #ffffff;
+    color: #0D0D0D;
     display: block;
     background: rgba(255, 255, 255, 0.10);
     cursor: pointer;
@@ -1010,12 +1010,12 @@ div#mCSB_1_container {
     position: relative;
     display: block;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.80);
+    color: rgba(255, 255, 255, 0);
     margin-bottom: 3px;
 }
 
 .mobile-menu .contact-info ul li a {
-    color: rgba(255, 255, 255, 0.80);
+    color: rgba(255, 255, 255, 0);
 }
 
 .mobile-menu .contact-info ul li a:hover {
