@@ -61,10 +61,10 @@ export default function FeatureSection() {
                 <i className="icon-29"></i>
               </div>
               <div className="feture_image">
-                <img src="/assets/images/resource/feature_image_1.jpg" alt="Feature" />
+                <img src="/assets/images/resource/website-graphics-04.png" alt="Feature" />
               </div>
               <div className="chart_image_five float-bob-x">
-                <img src="/assets/images/resource/chart_5.png" alt="Chart" />
+                <img src="/assets/images/resource/website-graphics-05.png" alt="Chart" />
               </div>
             </div>
           </div>

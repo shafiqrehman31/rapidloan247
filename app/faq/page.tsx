@@ -76,31 +76,21 @@ export default function FAQPage() {
   return (
     <main>
       {/* Page Breadcrumb */}
-      <section className="page_breadcrumb">
-        <div className="page_breadcrumb_shape_one float-bob-x">
-          <Image 
-            src="/assets/images/icons/shape_icon_13.png" 
-            alt="Shape Icon" 
-            width={100}
-            height={100}
-          />
-        </div>
-        <div className="page_breadcrumb_shape_two float-bob-y">
-          <Image 
-            src="/assets/images/icons/shape_icon_1.png" 
-            alt="Shape Icon" 
-            width={100}
-            height={100}
-          />
-        </div>    
+      <section className="work_process_section bg_dark">
+        <div className="credit_card float-bob-y">
+        <img src="/assets/images/icons/credit-card.png" alt="Credit Card" />
+      </div>
+      <div className="master_card float-bob-y">
+        <img src="/assets/images/icons/mastercard.png" alt="Mastercard" />
+      </div>
         <div className="container">
           <div className="breadcrumb_content centred">
-            <div className="breadcrumb_subtitle"><h6>FAQ</h6></div>
-            <h1 className="breadcrumb_title">Frequently Asked Questions</h1>
+            <div className="breadcrumb_subtitle"><h6 className="darkw">FAQ</h6></div>
+            <h1 className="breadcrumb_title darkw">Frequently Asked Questions</h1>
             <ul className="breadcrumb_menu">
-              <li><Link href="/">Home</Link></li>
+              <li><Link className="darkw" href="/">Home</Link></li>
               <li>/</li>
-              <li>FAQ</li>
+              <li className="darkw">FAQ</li>
             </ul>
           </div>
         </div>

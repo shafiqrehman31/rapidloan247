@@ -18,11 +18,21 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  title: 'Financer - Financial Consulting Template',
-  description: 'Professional financial consulting and investment services',
-  keywords: ['finance', 'consulting', 'investment', 'banking', 'financial services'],
-}
-
+  title: 'RapidLoan24/7 – Fast, Secure & Instant Online Loans',
+  description:
+    'RapidLoan24/7 offers fast, secure, and hassle-free online loans. Apply 24/7 for instant approval, flexible repayment options, and trusted financial solutions.',
+  keywords: [
+    'online loan',
+    'instant loan',
+    'fast loan',
+    'quick cash loan',
+    'personal loan',
+    'secure online loans',
+    '24/7 loan service',
+    'emergency loan',
+    'RapidLoan24/7',
+  ],
+};
 export default function RootLayout({
   children,
 }: {
@@ -33,8 +43,8 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="shortcut icon" href="/assets/images/icons/favicon.png" type="image/x-icon" />
-        <link rel="icon" href="/assets/images/icons/favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/assets/images/icons/favicon-32x32.pngg" type="image/x-icon" />
+        <link rel="icon" href="/assets/images/icons/favicon-32x32.png" type="image/x-icon" />
         
         {/* CSS Files */}
         <link href="/assets/css/bootstrap.css" rel="stylesheet" />

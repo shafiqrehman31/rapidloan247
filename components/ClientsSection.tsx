@@ -5,11 +5,11 @@ import { Client } from '@/types';
 
 export default function ClientsSection() {
   const clients: Client[] = [
-    { name: 'Client 1', logo: '/assets/images/clients/client-1.png', alt: 'Client 1' },
-    { name: 'Client 2', logo: '/assets/images/clients/client-2.png', alt: 'Client 2' },
-    { name: 'Client 3', logo: '/assets/images/clients/client-3.png', alt: 'Client 3' },
-    { name: 'Client 4', logo: '/assets/images/clients/client-4.png', alt: 'Client 4' },
-    { name: 'Client 5', logo: '/assets/images/clients/client-5.png', alt: 'Client 5' },
+    { name: 'Client 1', logo: '/assets/images/clients/1.png', alt: 'Client 1' },
+    { name: 'Client 2', logo: '/assets/images/clients/2.png', alt: 'Client 2' },
+    { name: 'Client 3', logo: '/assets/images/clients/3.png', alt: 'Client 3' },
+    { name: 'Client 4', logo: '/assets/images/clients/4.png', alt: 'Client 4' },
+    { name: 'Client 5', logo: '/assets/images/clients/5.png', alt: 'Client 5' },
   ];
 
   useEffect(() => {

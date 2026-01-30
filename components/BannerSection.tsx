@@ -49,7 +49,7 @@ export default function BannerSection() {
                       <img src="/assets/images/icons/shape_icon_4.png" alt="Shape Icon" />
                     </div>
                     <div className="chart_image">
-                      <img src="/assets/images/resource/chart_4.png" alt="Chart" />
+                      <img src="/assets/images/resource/website-gaphic.png" alt="Chart" />
                     </div>
                   </div>
                   <div className="income_chart float-bob-y">
@@ -64,10 +64,10 @@ export default function BannerSection() {
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 clomun">
                   <div className="banner_image_two">
-                    <img src="/assets/images/resource/banner_image_1.jpg" alt="Banner" />
+                    <img src="/assets/images/resource/banner-03.png" alt="Banner" />
                   </div>
                   <div className="banner_image_three">
-                    <img src="/assets/images/resource/banner_image_three.png" alt="Banner Three" />
+                    <img src="/assets/images/resource/website-graphics-01.png" alt="Banner Three" />
                   </div>
                 </div>
               </div>

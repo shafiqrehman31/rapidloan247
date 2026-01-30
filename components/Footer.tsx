@@ -29,7 +29,7 @@ export default function Footer() {
               >
                 <figure className="footer_logo">
                   <Link href="/">
-                    <img src="/assets/images/footer-logo.png" alt="Financer Logo" />
+                    <img src="/assets/images/footer-speedy.png" alt="Financer Logo" />
                   </Link>
                 </figure>
                 <p>
@@ -92,16 +92,12 @@ export default function Footer() {
 
                 <div>
                   
-                    Address: ert 567 ntrgyuhf, 5675 <br></br>
+                    Address: 3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010 <br></br>
                     Email: <Link href="mailto:info@rapidloan247.com">Info@rapidloan247.com</Link> <br></br>
                 <p>
                 <br></br>
-                  Rapid Loan 24/7 is a trading style of Name Limited company registered in name and name .
+                  Rapid Loan 24/7 is a trading style of Name Limited company registered in name and name.
                 </p>
-
-                      
-                  
-                  
                 </div>
               </div>
             </div>

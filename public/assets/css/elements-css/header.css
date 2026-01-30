@@ -132,7 +132,7 @@
 }
 
 .main_header_inner .main_header_logo {
-    max-width: 240px;
+    max-width: 115px;
 }
 
 .main_header_inner .location-info {
@@ -1042,7 +1042,7 @@ div#mCSB_1_container {
     font-size: 24px;
     z-index: 99;
     color: #fff;
-    background: linear-gradient(267deg, #E770C1 11.27%, #9F70FD 88.73%);
+    background: linear-gradient(267deg, #FF7539 11.27%, #FF8F39 88.73%);
     border: 1px solid var(--theme-color);
     border-radius: 50%;
     text-align: center;
@@ -1061,7 +1061,7 @@ div#mCSB_1_container {
     z-index: -1;
     transform: scale(0.0);
     border-radius: 50%;
-    background: linear-gradient(267deg, #9F70FD 11.27%, #E770C1 88.73%);
+    background: linear-gradient(267deg, #FF8F39 11.27%, #FF7539 88.73%);
     transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
@@ -1141,5 +1141,64 @@ div#mCSB_1_container {
     }
     .menu_area .mobile-nav-toggler .menu-bar img {
         transform: scale(.5);
+    }
+}
+
+
+/* Header Sticky Behavior Fix */
+
+.main_header {
+    position: relative;
+    background: #fff;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.main_header.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.sticky_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+}
+
+.sticky_header.sticky {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* Ensure only one header is visible at a time */
+
+.main_header:not(.hidden)+.sticky_header {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-100%) !important;
+}
+
+
+/* Fix for mobile devices */
+
+@media (max-width: 991px) {
+    .sticky_header {
+        display: none;
+    }
+    .main_header.hidden {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
     }
 }

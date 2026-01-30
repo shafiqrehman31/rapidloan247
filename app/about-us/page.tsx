@@ -10,31 +10,22 @@ export default function AboutPage() {
   return (
     <main>
       {/* Page Breadcrumb */}
-      <section className="page_breadcrumb">
-        <div className="page_breadcrumb_shape_one float-bob-x">
-          <Image 
-            src="/assets/images/icons/shape_icon_13.png" 
-            alt="Shape Icon" 
-            width={100}
-            height={100}
-          />
-        </div>
-        <div className="page_breadcrumb_shape_two float-bob-y">
-          <Image 
-            src="/assets/images/icons/shape_icon_1.png" 
-            alt="Shape Icon" 
-            width={100}
-            height={100}
-          />
-        </div>    
+      <section className="work_process_section bg_dark">
+        <div className="credit_card float-bob-y">
+        <img src="/assets/images/icons/credit-card.png" alt="Credit Card" />
+      </div>
+      <div className="master_card float-bob-y">
+        <img src="/assets/images/icons/mastercard.png" alt="Mastercard" />
+      </div>
+      
         <div className="container">
           <div className="breadcrumb_content centred">
-            <div className="breadcrumb_subtitle"><h6>About Rapid Loan 24/7</h6></div>
-            <h1 className="breadcrumb_title">Fast, Simple & Secure Loan Solutions</h1>
+            <div className="breadcrumb_subtitle"><h6 className="darkw">About Rapid Loan 24/7</h6></div>
+            <h1 className="breadcrumb_title darkw">Fast, Simple & Secure Loan Solutions</h1>
             <ul className="breadcrumb_menu">
-              <li><Link href="/">Home</Link></li>
+              <li><Link className="darkw" href="/">Home</Link></li>
               <li>/</li>
-              <li>About Us</li>
+              <li className="darkw">About Us</li>
             </ul>
           </div>
         </div>
@@ -55,7 +46,7 @@ export default function AboutPage() {
             <p>Rapid Loan 24/7 is built to simplify borrowing. With a user-friendly process, reliable connections, and transparent information, we help you explore loan options with confidence without unnecessary delays or confusion.</p>
             <div className="banner_image">
               <Image 
-                src="/assets/images/resource/about_banner_image.jpg" 
+                src="/assets/images/resource/website-graphics-09.png" 
                 alt="About Rapid Loan 24/7" 
                 width={1200}
                 height={600}
