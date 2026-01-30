@@ -1204,7 +1204,12 @@ div#mCSB_1_container {
 }
 
 
-/* Header Styles */
+/* ============================================
+   HEADER STYLES - FIX FOR MENU VISIBILITY
+   ============================================ */
+
+
+/* Header Base Styles */
 
 .header {
     position: fixed;
@@ -1212,112 +1217,131 @@ div#mCSB_1_container {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: transparent;
     transition: all 0.3s ease;
-    padding: 20px 0;
 }
 
-.header.scrolled,
-.header.sticky {
+.header.scrolled {
+    background: #fff !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Main Header */
+
+.main_header {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.main_header.sticky {
     background: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
 }
 
-.header_inner {
+.main_header_inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
 }
 
 
-/* Logo Styles */
+/* Logo Text Styles */
 
-.header_logo .logo {
-    display: inline-block;
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
     text-decoration: none;
 }
 
-.logo_text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1;
-}
-
-.logo_top {
+.logo-top {
     font-size: 24px;
     font-weight: 700;
     color: #4a6cf7;
     letter-spacing: 1px;
 }
 
-.logo_bottom {
+.logo-bottom {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-top: 2px;
 }
 
-.loan_text {
+.loan-text {
     font-size: 24px;
     font-weight: 700;
     color: #222;
 }
 
-.hours_text {
-    font-size: 18px;
+.hours-text {
+    font-size: 16px;
     font-weight: 600;
-    color: #4a6cf7;
-    background: rgba(74, 108, 247, 0.1);
+    color: #fff;
+    background: #4a6cf7;
     padding: 2px 8px;
     border-radius: 4px;
     margin-left: 5px;
 }
 
 
-/* Desktop Navigation */
+/* When header is scrolled, change logo colors */
 
-.desktop_nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.header.scrolled .loan-text,
+.main_header.sticky .loan-text {
+    color: #222;
 }
 
-.nav_menu {
+
+/* Desktop Navigation */
+
+.main-menu .navigation {
     display: flex;
+    align-items: center;
     gap: 40px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav_item {
+.main-menu .navigation>li {
     position: relative;
 }
 
-.nav_link {
+.main-menu .navigation>li>a {
     color: #fff;
-    text-decoration: none;
+    /* White text on transparent header */
     font-size: 16px;
     font-weight: 600;
+    text-decoration: none;
     padding: 8px 0;
     position: relative;
     transition: all 0.3s ease;
 }
 
-.header.scrolled .nav_link,
-.header.sticky .nav_link {
+
+/* When header is scrolled or sticky, change menu color to dark */
+
+.header.scrolled .main-menu .navigation>li>a,
+.main_header.sticky .main-menu .navigation>li>a {
     color: #222;
+    /* Dark text on white header */
 }
 
-.nav_item.active .nav_link,
-.nav_link:hover {
+.main-menu .navigation>li.active>a {
     color: #4a6cf7;
 }
 
-.nav_item.active .nav_link:after {
+.main-menu .navigation>li>a:hover {
+    color: #4a6cf7;
+}
+
+
+/* Active menu indicator */
+
+.main-menu .navigation>li.active>a:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1329,9 +1353,10 @@ div#mCSB_1_container {
 }
 
 
-/* CTA Button */
+/* Get Loan Button */
 
-.header_cta .btn_primary {
+.btn_style_one {
+    display: inline-block;
     background: #4a6cf7;
     color: #fff;
     padding: 12px 30px;
@@ -1339,72 +1364,58 @@ div#mCSB_1_container {
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #4a6cf7;
-    white-space: nowrap;
 }
 
-.btn_primary:hover {
-    background: transparent;
+.btn_style_one:hover {
+    background: #3a5ce5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+}
+
+
+/* Mobile Menu Toggler */
+
+.mobile-nav-toggler {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-bar {
+    font-size: 24px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .menu-bar,
+.main_header.sticky .menu-bar {
     color: #4a6cf7;
 }
 
-.header.scrolled .btn_primary:hover,
-.header.sticky .btn_primary:hover {
-    background: #3a5ce5;
-    color: #fff;
-    border-color: #3a5ce5;
-}
 
+/* Mobile Menu Styles */
 
-/* Mobile Menu Toggle */
-
-.mobile_menu_toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1002;
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 24px;
-}
-
-.hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #4a6cf7;
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    max-width: 90%;
+    height: 100%;
+    background: #fff;
+    z-index: 1001;
     transition: all 0.3s ease;
-    transform-origin: center;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.header.scrolled .hamburger span,
-.header.sticky .hamburger span {
-    background: #4a6cf7;
+.mobile-menu.active {
+    right: 0;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
-}
-
-
-/* Mobile Menu */
-
-.mobile_menu_overlay {
+.menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -1417,71 +1428,63 @@ div#mCSB_1_container {
     transition: all 0.3s ease;
 }
 
-.mobile_menu_overlay.active {
+.mobile-menu.active+.menu-overlay {
     opacity: 1;
     visibility: visible;
 }
 
-.mobile_menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
-    max-width: 90%;
+.menu-container {
     height: 100%;
-    background: #fff;
-    z-index: 1001;
-    padding: 20px;
-    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.mobile_menu.active {
-    right: 0;
-}
-
-.mobile_menu_header {
+.menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    padding: 20px;
     border-bottom: 1px solid #eee;
 }
 
-.mobile_logo .logo_text .logo_top {
+.mobile-logo .logo-text .logo-top {
     font-size: 20px;
 }
 
-.mobile_logo .logo_text .loan_text {
+.mobile-logo .logo-text .loan-text {
     font-size: 20px;
 }
 
-.mobile_logo .logo_text .hours_text {
+.mobile-logo .logo-text .hours-text {
     font-size: 14px;
 }
 
-.mobile_menu_close {
+.menu-close-btn {
     background: none;
     border: none;
-    cursor: pointer;
+    font-size: 24px;
     color: #222;
+    cursor: pointer;
     padding: 5px;
 }
 
-.mobile_nav_menu {
+.menu-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.mobile-navigation {
     list-style: none;
-    margin: 0;
+    margin: 0 0 30px 0;
     padding: 0;
 }
 
-.mobile_nav_item {
+.mobile-menu-item {
     margin-bottom: 10px;
 }
 
-.mobile_nav_link {
+.mobile-menu-link {
     display: block;
     padding: 12px 15px;
     color: #222;
@@ -1492,55 +1495,112 @@ div#mCSB_1_container {
     transition: all 0.3s ease;
 }
 
-.mobile_nav_item.active .mobile_nav_link,
-.mobile_nav_link:hover {
+.mobile-menu-item.current .mobile-menu-link,
+.mobile-menu-link:hover {
     background: rgba(74, 108, 247, 0.1);
     color: #4a6cf7;
 }
 
-.mobile_cta {
-    margin-top: auto;
+.mobile-contact-info,
+.mobile-social-links {
+    margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #eee;
 }
 
-.mobile_cta .btn_primary {
-    display: block;
-    text-align: center;
-    width: 100%;
+.contact-title,
+.social-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-item i {
+    color: #4a6cf7;
+    margin-top: 3px;
+}
+
+.contact-item a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #4a6cf7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    color: #222;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #4a6cf7;
+    color: #fff;
+    transform: translateY(-3px);
 }
 
 
-/* Responsive */
+/* Responsive Styles */
 
 @media (max-width: 991px) {
-    .desktop_nav,
-    .header_cta {
-        display: none;
-    }
-    .mobile_menu_toggle {
+    .mobile-nav-toggler {
         display: block;
     }
-    .header_inner {
-        gap: 15px;
+    .main-menu {
+        display: none;
+    }
+    .header_right_content {
+        display: none;
+    }
+    .logo-top {
+        font-size: 20px;
+    }
+    .loan-text {
+        font-size: 20px;
+    }
+    .hours-text {
+        font-size: 14px;
     }
 }
 
-@media (max-width: 576px) {
-    .logo_top {
-        font-size: 20px;
+@media (min-width: 992px) {
+    .mobile-menu {
+        display: none;
     }
-    .loan_text {
-        font-size: 20px;
-    }
-    .hours_text {
-        font-size: 14px;
-    }
-    .header {
-        padding: 15px 0;
-    }
-    .header.scrolled,
-    .header.sticky {
-        padding: 10px 0;
+    .menu-overlay {
+        display: none;
     }
 }

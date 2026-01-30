@@ -14,6 +14,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
   const menuItems: MenuItem[] = [
@@ -30,10 +31,19 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 100);
+      const scrollTop = window.scrollY;
+      if (scrollTop > 50) {
+        setScrolled(true);
+        setIsSticky(true);
+      } else {
+        setScrolled(false);
+        setIsSticky(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -53,22 +63,32 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
-      {/* Main Header - Always visible when not sticky */}
-      <div className={`main_header ${isSticky ? 'hidden' : ''}`}>
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+      {/* Main Header - Single header that changes on scroll */}
+      <div className={`main_header ${isSticky ? 'sticky' : ''}`}>
         <div className="container">
           <div className="main_header_inner">
             <div className="main_header_logo">
               <Link href="/">
-                <img src="/assets/images/speedy-logo.png" alt="Company Logo" />
+                <div className="logo-text">
+                  <span className="logo-top">SPEEDY</span>
+                  <span className="logo-bottom">
+                    <span className="loan-text">LOAN</span>
+                    <span className="hours-text">24/7</span>
+                  </span>
+                </div>
               </Link>
             </div>
+            
             <div className="main_header_menu menu_area">
+              {/* Mobile Navigation Toggler */}
               <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
                 <div className="menu-bar">
                   <i className="fas fa-bars"></i>
                 </div>
               </div>
+              
+              {/* Desktop Navigation */}
               <nav className="main-menu">
                 <ul className="navigation">
                   {menuItems.map((item, index) => (
@@ -79,35 +99,7 @@ export default function Header() {
                 </ul>
               </nav>
             </div>
-            <div className="header_right_content">
-              <div className="link-btn">
-                <Link href="/contact" className="btn_style_one">Get Loan</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Sticky Header - Only shows when scrolling */}
-      <div className={`sticky_header ${isSticky ? 'sticky' : ''}`}>
-        <div className="container">
-          <div className="main_header_inner">
-            <div className="main_header_logo">
-              <Link href="/">
-                <img src="/assets/images/speedy-logo.png" alt="Company Logo" />
-              </Link>
-            </div>
-            <div className="main_header_menu menu_area">
-              <nav className="main-menu">
-                <ul className="navigation">
-                  {menuItems.map((item, index) => (
-                    <li key={index} className={isMenuItemActive(item.href) ? 'active' : ''}>
-                      <Link href={item.href}>{item.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
+            
             <div className="header_right_content">
               <div className="link-btn">
                 <Link href="/contact" className="btn_style_one">Get Loan</Link>
@@ -124,7 +116,13 @@ export default function Header() {
           <div className="menu-header">
             <div className="mobile-logo">
               <Link href="/" onClick={closeMobileMenu}>
-                <img src="/assets/images/speedy-logo.png" alt="Mobile Logo" />
+                <div className="logo-text">
+                  <span className="logo-top">SPEEDY</span>
+                  <span className="logo-bottom">
+                    <span className="loan-text">LOAN</span>
+                    <span className="hours-text">24/7</span>
+                  </span>
+                </div>
               </Link>
             </div>
             <button className="menu-close-btn" onClick={closeMobileMenu}>
