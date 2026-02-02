@@ -32,6 +32,7 @@ export default function BannerSection() {
               </div>
             </div>
           </div>
+          
           <div className="col-xl-6 col-lg-6 col-md-12">
             <div 
               className="banner_left_image aos-init aos-animate" 
