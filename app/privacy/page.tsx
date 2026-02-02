@@ -9,21 +9,22 @@ export default function PrivacyPage() {
   return (
     <main>
       {/* Page Header */}
-      <section className="page_header" style={{ 
-        background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/background/page-header-bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '120px 0 80px'
-      }}>
+      <section className="work_process_section bg_dark">
+        <div className="credit_card float-bob-y">
+        <img src="/assets/images/icons/credit-card.png" alt="Credit Card" />
+      </div>
+      <div className="master_card float-bob-y">
+        <img src="/assets/images/icons/mastercard.png" alt="Mastercard" />
+      </div>
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
               <div className="page_header_content">
-                <h2>Privacy Policy</h2>
+                <h1 className='breadcrumb_title darkw'>Privacy Policy</h1>
                 <div className="breadcrumb">
-                  <Link href="/">Home</Link> 
+                  <Link className='darkw' href="/">Home</Link> 
                   <span className="breadcrumb-separator">/</span>
-                  <span className="current">Privacy Policy</span>
+                  <span className="current darkw">Privacy Policy</span>
                 </div>
               </div>
             </div>

@@ -248,7 +248,7 @@ export default function ContactPage() {
                     disabled={isSubmitting}
                     style={{
                       display: 'inline-block',
-                      background: '#4a6cf7',
+                      background: '#ff7539',
                       color: '#fff',
                       padding: '15px 40px',
                       borderRadius: '30px',
