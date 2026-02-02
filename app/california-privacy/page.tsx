@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'California Privacy Notice (CCPA/CPRA) - Rapid Loan 24/7',
+  title: 'California Privacy Notice (CCPA/CPRA) - Speedy Loan 24/7',
   description: 'California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) notice for California residents.',
 };
 
@@ -55,7 +55,7 @@ export default function CaliforniaPrivacyPage() {
                   <div className="alert_box bg-light-blue p-4 mb-4">
                     <h5 className="mb-2">NOTICE FOR CALIFORNIA RESIDENTS</h5>
                     <p className="mb-0">
-                      This California Privacy Notice supplements the Privacy Policy of Rapid Loan 24/7 ("Company," "we," "us," or "our") and applies solely to California residents ("Consumers") as defined by the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA).
+                      This California Privacy Notice supplements the Privacy Policy of Speedy Loan 24/7 ("Company," "we," "us," or "our") and applies solely to California residents ("Consumers") as defined by the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA).
                     </p>
                   </div>
                 </div>
@@ -66,13 +66,13 @@ export default function CaliforniaPrivacyPage() {
                   <div className="california_privacy_section mb_40">
                     <h3 className="section_title mb-3">1. Our Role</h3>
                     <p className="mb-3">
-                      Rapid Loan 24/7 operates a financial lead-generation and distribution platform that connects
+                      Speedy Loan 24/7 operates a financial lead-generation and distribution platform that connects
                       consumers seeking loan products with third-party lenders and financial service providers through
                       real-time routing and ping-tree technology.
                     </p>
                     <div className="highlight_box p-4 bg-light-red">
                       <p className="mb-0">
-                        <strong>Important Disclosure:</strong> Rapid Loan 24/7 is not a lender, does not make credit decisions, and does not issue loans.
+                        <strong>Important Disclosure:</strong> Speedy Loan 24/7 is not a lender, does not make credit decisions, and does not issue loans.
                       </p>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function CaliforniaPrivacyPage() {
 
                     <h5 className="mb-3">B. Sale or Sharing of Personal Information</h5>
                     <p className="mb-3">
-                      Rapid Loan 24/7 may sell or share personal information to third-party lenders and financial
+                      Speedy Loan 24/7 may sell or share personal information to third-party lenders and financial
                       buyers in exchange for monetary or other valuable consideration.
                     </p>
                     <p className="mb-3">
@@ -200,8 +200,8 @@ export default function CaliforniaPrivacyPage() {
                       <h5 className="mb-2">Opt-Out Instructions</h5>
                       <p className="mb-2">You may opt out of the sale or sharing of your personal information at any time.</p>
                       <div className="d-flex align-items-center gap-3 flex-wrap">
-                        <a href="mailto:contact@rapidloan247.com" className="btn_style_three">
-                          Email: contact@rapidloan247.com
+                        <a href="mailto:contact@speedyloan247.com" className="btn_style_three">
+                          Email: contact@speedyloan247.com
                         </a>
                         <Link href="/do-not-sell" className="btn_style_four">
                           Do Not Sell or Share My Personal Information
@@ -290,7 +290,7 @@ export default function CaliforniaPrivacyPage() {
                       You may submit a request by contacting us at:
                     </p>
                     <div className="contact_box p-4 bg-light-gray text-center">
-                      <h5 className="mb-2">Email: contact@rapidloan247.com</h5>
+                      <h5 className="mb-2">Email: contact@speedyloan247.com</h5>
                       <p className="mb-0">
                         We may verify your identity before processing your request.
                       </p>
@@ -324,7 +324,7 @@ export default function CaliforniaPrivacyPage() {
                   <div className="california_privacy_section mb_40">
                     <h3 className="section_title mb-3">11. Minors</h3>
                     <p>
-                      Rapid Loan 24/7 does not knowingly sell or share the personal information of individuals under
+                      Speedy Loan 24/7 does not knowingly sell or share the personal information of individuals under
                       16 years of age.
                     </p>
                   </div>
@@ -342,9 +342,9 @@ export default function CaliforniaPrivacyPage() {
                   <div className="california_privacy_section">
                     <h3 className="section_title mb-3">13. Contact Information</h3>
                     <div className="contact_info p-4 bg-light-blue text-center">
-                      <h5 className="mb-2">Rapid Loan 24/7</h5>
-                      <p className="mb-1"><strong>Website:</strong> www.rapidloan247.com</p>
-                      <p className="mb-0"><strong>Email:</strong> contact@rapidloan247.com</p>
+                      <h5 className="mb-2">Speedy Loan 24/7</h5>
+                      <p className="mb-1"><strong>Website:</strong> www.speedyloan247.com</p>
+                      <p className="mb-0"><strong>Email:</strong> contact@speedyloan247.com</p>
                     </div>
                   </div>
                 </div>

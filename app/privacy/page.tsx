@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy - Rapid Loan 24/7',
-  description: 'Privacy policy explaining how Rapid Loan 24/7 collects, uses, and protects your personal information.',
+  title: 'Privacy Policy - Speedy Loan 24/7',
+  description: 'Privacy policy explaining how Speedy Loan 24/7 collects, uses, and protects your personal information.',
 };
 
 export default function PrivacyPage() {
@@ -53,13 +53,13 @@ export default function PrivacyPage() {
                 {/* Introduction */}
                 <div className="privacy_intro mb_40">
                   <p>
-                    Rapid Loan 24/7 ("Company," "we," "us," or "our") operates a financial lead-generation platform
+                    Speedy Loan 24/7 ("Company," "we," "us," or "our") operates a financial lead-generation platform
                     that connects consumers seeking loan products with third-party lenders and financial service
                     providers through a real-time distribution (ping-tree) model.
                   </p>
                   <p>
                     This Privacy Policy explains how we collect, use, share, and protect personal information when you
-                    visit www.rapidloan247.com ("Website") or submit information through our forms.
+                    visit www.speedyloan247.com ("Website") or submit information through our forms.
                   </p>
                   <div className="alert_box bg-light-red p-4 mt-4">
                     <h5 className="mb-2">IMPORTANT NOTICE</h5>
@@ -307,7 +307,7 @@ export default function PrivacyPage() {
                       </ul>
                       <div className="opt_out_box p-4 bg-light-gray">
                         <h6 className="mb-2">Opt-Out:</h6>
-                        <p className="mb-0">Email: contact@rapidloan247.com</p>
+                        <p className="mb-0">Email: contact@speedyloan247.com</p>
                       </div>
                     </div>
                   </div>
@@ -358,9 +358,9 @@ export default function PrivacyPage() {
                   <div className="privacy_section">
                     <h3 className="section_title mb-3">15. Contact Us</h3>
                     <div className="contact_info p-4 bg-light-gray">
-                      <p className="mb-1"><strong>Rapid Loan 24/7</strong></p>
-                      <p className="mb-1"><strong>Website:</strong> www.rapidloan247.com</p>
-                      <p className="mb-0"><strong>Email:</strong> contact@rapidloan247.com</p>
+                      <p className="mb-1"><strong>Speedy Loan 24/7</strong></p>
+                      <p className="mb-1"><strong>Website:</strong> www.speedyloan247.com</p>
+                      <p className="mb-0"><strong>Email:</strong> contact@speedyloan247.com</p>
                     </div>
                   </div>
                 </div>

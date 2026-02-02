@@ -165,8 +165,8 @@ export default function Header() {
                 </li>
                 <li className="contact-item">
                   <i className="fas fa-envelope"></i>
-                  <Link href="mailto:contact@rapidloan247.com" onClick={closeMobileMenu}>
-                    contact@rapidloan247.com
+                  <Link href="mailto:contact@speedyloan247.com" onClick={closeMobileMenu}>
+                    contact@speedyloan247.com
                   </Link>
                 </li>
               </ul>

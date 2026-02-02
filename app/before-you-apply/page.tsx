@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Before You Apply - Important Information | Rapid Loan 24/7',
+  title: 'Before You Apply - Important Information | Speedy Loan 24/7',
   description: 'Essential information you need to know before applying for any financial product',
 };
 
@@ -68,7 +68,7 @@ export default function BeforeYouApplyPage() {
                     </ul>
                   </div>
                   <p>
-                    <strong>Rapid Loan 24/7</strong> is not a lender, and we do not control loan fees, penalties, or repayment rules. 
+                    <strong>Speedy Loan 24/7</strong> is not a lender, and we do not control loan fees, penalties, or repayment rules. 
                     Always read the lender's loan agreement carefully so you know what happens if a payment is late or missed.
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export default function BeforeYouApplyPage() {
                 <div className="faq_block mb_40">
                   <h3 className="faq_title mb-3">Debt Collection</h3>
                   <p className="mb-3">
-                    <strong>Rapid Loan 24/7</strong> does not collect payments and does not handle debt collection.
+                    <strong>Speedy Loan 24/7</strong> does not collect payments and does not handle debt collection.
                   </p>
                   <p>
                     If you do not repay your loan, the lender may contact you to collect the debt. 
@@ -114,7 +114,7 @@ export default function BeforeYouApplyPage() {
                     <li>The day and time of approval</li>
                   </ul>
                   <p>
-                    <strong>Rapid Loan 24/7</strong> does not control funding times.
+                    <strong>Speedy Loan 24/7</strong> does not control funding times.
                   </p>
                 </div>
 
@@ -122,7 +122,7 @@ export default function BeforeYouApplyPage() {
                 <div className="faq_block">
                   <h3 className="faq_title mb-3">Our Role</h3>
                   <p className="mb-3">
-                    <strong>Rapid Loan 24/7</strong> helps connect you with lenders — we do not provide loans.
+                    <strong>Speedy Loan 24/7</strong> helps connect you with lenders — we do not provide loans.
                   </p>
                   <ul className="feature_list mb-3">
                     <li>We do not decide who gets approved</li>
@@ -147,7 +147,7 @@ export default function BeforeYouApplyPage() {
                       <i className="icon-11"></i>
                       <div className="content">
                         <h6>Email Us</h6>
-                        <Link href="mailto:info@rapidloan247.com">info@rapidloan247.com</Link>
+                        <Link href="mailto:info@speedyloan247.com">info@speedyloan247.com</Link>
                       </div>
                     </div>
                     <div className="contact_item">

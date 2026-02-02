@@ -13,8 +13,8 @@ export default function FAQSection() {
   const [faqItems, setFaqItems] = useState<FAQItem[]>([
     {
       id: 1,
-      question: '1. What is Rapid Loan 24/7?',
-      answer: 'Rapid Loan 24/7 is an online loan service that helps users access loan options through a fast and simple application process.',
+      question: '1. What is Speedy Loan 24/7?',
+      answer: 'Speedy Loan 24/7 is an online loan service that helps users access loan options through a fast and simple application process.',
       isActive: false
     },
     {

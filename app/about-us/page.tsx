@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Us - Rapid Loan 24/7',
-  description: 'Learn about Rapid Loan 24/7 and our mission to transform financial services.',
+  title: 'About Us - Speedy Loan 24/7',
+  description: 'Learn about Speedy Loan 24/7 and our mission to transform financial services.',
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
       
         <div className="container">
           <div className="breadcrumb_content centred">
-            <div className="breadcrumb_subtitle"><h6 className="darkw">About Rapid Loan 24/7</h6></div>
+            <div className="breadcrumb_subtitle"><h6 className="darkw">About Speedy Loan 24/7</h6></div>
             <h1 className="breadcrumb_title darkw">Fast, Simple & Secure Loan Solutions</h1>
             <ul className="breadcrumb_menu">
               <li><Link className="darkw" href="/">Home</Link></li>
@@ -43,11 +43,11 @@ export default function AboutPage() {
           <div className="banner_content centred">
             <div className="tag_text"><h6>About us</h6></div>
             <h1>Reimagining the power of <br />Loan Service</h1>
-            <p>Rapid Loan 24/7 is built to simplify borrowing. With a user-friendly process, reliable connections, and transparent information, we help you explore loan options with confidence without unnecessary delays or confusion.</p>
+            <p>Speedy Loan 24/7 is built to simplify borrowing. With a user-friendly process, reliable connections, and transparent information, we help you explore loan options with confidence without unnecessary delays or confusion.</p>
             <div className="banner_image">
               <Image 
                 src="/assets/images/resource/website-graphics-09.png" 
-                alt="About Rapid Loan 24/7" 
+                alt="About Speedy Loan 24/7" 
                 width={1200}
                 height={600}
                 priority
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   <i className="icon-27"></i>
                 </div>
                 <h4>Fast Processing</h4>
-                <p>Powered by smart technology, Rapid Loan 24/7 helps match your request quickly. Submit your application and receive multiple loan options within minutes saving you time when it matters most.</p>
+                <p>Powered by smart technology, Speedy Loan 24/7 helps match your request quickly. Submit your application and receive multiple loan options within minutes saving you time when it matters most.</p>
                 <div className="link_btn">
                   <Link href="/contact">
                     Apply Now <i className="fa-solid fa-angle-right"></i>

@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <div className="contact_block_title"><h4>Email Address</h4></div>
                 <div className="contact_block_text">
                   <p>
-                    <a href="mailto:contact@rapidloan247.com">info@rapidloan247.com</a>
+                    <a href="mailto:contact@speedyloan247.com">info@speedyloan247.com</a>
                     
                   </p>
                 </div>

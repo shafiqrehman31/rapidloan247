@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
             <h6>Testimonials</h6>
           </div>
           <h2>What People Are Saying</h2>
-          <p className="section_subtitle">See how Rapid Loan 24/7 made borrowing simple and stress-free</p>
+          <p className="section_subtitle">See how Speedy Loan 24/7 made borrowing simple and stress-free</p>
         </div>
         
         {/* Testimonials in a Row */}

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terms & Conditions - Rapid Loan 24/7',
-  description: 'Terms and conditions of use for Rapid Loan 24/7 services and website.',
+  title: 'Terms & Conditions - Speedy Loan 24/7',
+  description: 'Terms and conditions of use for Speedy Loan 24/7 services and website.',
 };
 
 export default function TermsPage() {
@@ -53,9 +53,9 @@ export default function TermsPage() {
                 {/* Introduction */}
                 <div className="terms_intro mb_40">
                   <p>
-                    RapidLoan247.com and its owner and operator ("Rapid Loan 24/7," "we," "us," or "our")
+                    SpeedyLoan247.com and its owner and operator ("Speedy Loan 24/7," "we," "us," or "our")
                     provide loan referral and lead-generation services (described below), related content, and
-                    technology through our website located at www.rapidloan247.com (the "Site") and any related
+                    technology through our website located at www.speedyloan247.com (the "Site") and any related
                     applications, tools, features, or technologies (collectively, the "Service").
                   </p>
                   <p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
                   <div className="terms_section mb_40">
                     <h3 className="section_title mb-3">1. Loan Referral & Lead Generation Service</h3>
                     <p className="mb-3">
-                      Rapid Loan 24/7 operates an online loan referral and lead-distribution platform that connects
+                      Speedy Loan 24/7 operates an online loan referral and lead-distribution platform that connects
                       consumers with third-party lenders, lender networks, and financial service providers ("Lender
                       Partners").
                     </p>
@@ -116,7 +116,7 @@ export default function TermsPage() {
                   <div className="terms_section mb_40">
                     <h3 className="section_title mb-3">2. No Lending or Credit Decisions</h3>
                     <p className="mb-3">
-                      Rapid Loan 24/7 is not a lender, does not issue loans, and does not make credit decisions.
+                      Speedy Loan 24/7 is not a lender, does not issue loans, and does not make credit decisions.
                     </p>
                     <p className="mb-3">
                       We do not guarantee:
@@ -138,9 +138,9 @@ export default function TermsPage() {
                       By submitting a Request Form, you:
                     </p>
                     <ul className="feature_list mb-3">
-                      <li>Authorize Rapid Loan 24/7 to share your information with multiple Lender Partners</li>
+                      <li>Authorize Speedy Loan 24/7 to share your information with multiple Lender Partners</li>
                       <li>Acknowledge that you are requesting loan offers from third parties</li>
-                      <li>Agree that Rapid Loan 24/7 and Lender Partners may contact you via:</li>
+                      <li>Agree that Speedy Loan 24/7 and Lender Partners may contact you via:</li>
                     </ul>
                     <div className="ml-4 mb-3">
                       <ul className="feature_list">
@@ -190,9 +190,9 @@ export default function TermsPage() {
                       Once redirected:
                     </p>
                     <ul className="feature_list mb-3">
-                      <li>Rapid Loan 24/7 is no longer involved</li>
+                      <li>Speedy Loan 24/7 is no longer involved</li>
                       <li>The lender's own terms and privacy policies apply</li>
-                      <li>Rapid Loan 24/7 is not responsible for lender actions or decisions</li>
+                      <li>Speedy Loan 24/7 is not responsible for lender actions or decisions</li>
                     </ul>
                   </div>
 
@@ -237,7 +237,7 @@ export default function TermsPage() {
                   <div className="terms_section mb_40">
                     <h3 className="section_title mb-3">8. Changes to the Service</h3>
                     <p className="mb-3">
-                      Rapid Loan 24/7 may modify, suspend, or discontinue any part of the Service at any time without
+                      Speedy Loan 24/7 may modify, suspend, or discontinue any part of the Service at any time without
                       notice.
                     </p>
                     <p>
@@ -256,7 +256,7 @@ export default function TermsPage() {
                       <strong>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE."</strong>
                     </p>
                     <p className="mb-3">
-                      Rapid Loan 24/7 DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING:
+                      Speedy Loan 24/7 DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING:
                     </p>
                     <ul className="feature_list mb-3">
                       <li>Merchantability</li>
@@ -272,7 +272,7 @@ export default function TermsPage() {
                   <div className="terms_section mb_40">
                     <h3 className="section_title mb-3">10. Limitation of Liability</h3>
                     <p className="mb-3">
-                      To the maximum extent permitted by law, Rapid Loan 24/7, its partners, affiliates, and service
+                      To the maximum extent permitted by law, Speedy Loan 24/7, its partners, affiliates, and service
                       providers are not liable for:
                     </p>
                     <ul className="feature_list mb-3">
@@ -290,7 +290,7 @@ export default function TermsPage() {
                   <div className="terms_section mb_40">
                     <h3 className="section_title mb-3">11. Indemnification</h3>
                     <p>
-                      You agree to indemnify and hold harmless Rapid Loan 24/7 and its partners from any claims,
+                      You agree to indemnify and hold harmless Speedy Loan 24/7 and its partners from any claims,
                       damages, or expenses arising from:
                     </p>
                     <ul className="feature_list">
@@ -305,7 +305,7 @@ export default function TermsPage() {
                     <h3 className="section_title mb-3">12. Third-Party Links</h3>
                     <p>
                       The Service may include links to third-party websites.
-                      Rapid Loan 24/7 does not control or endorse third-party content or services.
+                      Speedy Loan 24/7 does not control or endorse third-party content or services.
                     </p>
                   </div>
 
@@ -352,9 +352,9 @@ export default function TermsPage() {
                   <div className="terms_section">
                     <h3 className="section_title mb-3">16. Contact Information</h3>
                     <div className="contact_info p-4 bg-light-gray">
-                      <p className="mb-1"><strong>Rapid Loan 24/7</strong></p>
-                      <p className="mb-1"><strong>Website:</strong> www.rapidloan247.com</p>
-                      <p className="mb-0"><strong>Email:</strong> contact@rapidloan247.com</p>
+                      <p className="mb-1"><strong>Speedy Loan 24/7</strong></p>
+                      <p className="mb-1"><strong>Website:</strong> www.speedyloan247.com</p>
+                      <p className="mb-0"><strong>Email:</strong> contact@speedyloan247.com</p>
                     </div>
                   </div>
                 </div>

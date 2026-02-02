@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const letters = ['R', 'a', 'p', 'i', 'd', 'l', 'o', 'a', 'n', '2', '4', '/', '7'];
+  const letters = ['S', 'P', 'E', 'E', 'D', 'Y', 'L', 'o', 'a', 'n', '2', '4', '/', '7'];
 
   useEffect(() => {
     // Simulate loading progress
@@ -84,7 +84,7 @@ export default function Preloader() {
             
             {/* Loading Message */}
             <div className="loading-message">
-              <p>Loading RapidLoan24...</p>
+              <p>Loading SpeedyLoan24...</p>
             </div>
           </div>
         </div>

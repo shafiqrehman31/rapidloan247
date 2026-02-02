@@ -18,8 +18,8 @@ export default function FAQPage() {
   const faqItems = [
         {
       id: 1,
-      question: 'What is Rapid Loan 24/7?',
-      answer: 'Rapid Loan 24/7 is an online loan service that helps users access loan options through a fast and simple application process.',
+      question: 'What is Speedy Loan 24/7?',
+      answer: 'Speedy Loan 24/7 is an online loan service that helps users access loan options through a fast and simple application process.',
       isActive: false
     },
     {

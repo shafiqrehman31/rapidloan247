@@ -93,10 +93,10 @@ export default function Footer() {
                 <div>
                   
                     Address: 3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010 <br></br>
-                    Email: <Link href="mailto:info@rapidloan247.com">Info@rapidloan247.com</Link> <br></br>
+                    Email: <Link href="mailto:info@speedyloan247.com">Info@speedyloan247.com</Link> <br></br>
                 <p>
                 <br></br>
-                  Rapid Loan 24/7 is a trading style of Name Limited company registered in name and name.
+                  Speedy Loan 24/7 is a trading style of Name Limited company registered in name and name.
                 </p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function Footer() {
         <div className="container">
           <div className="copyright">
             Copyright &copy; {new Date().getFullYear()} &nbsp;
-            <Link href="/">RapidLoan24/7</Link>
+            <Link href="/">SpeedyLoan24/7</Link>
             , Inc. All Rights Reserved
           </div>
         </div>

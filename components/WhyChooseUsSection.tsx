@@ -32,7 +32,7 @@ export default function WhyChooseUsSection() {
           <div className="tag_text">
             <h6>Why Choose us</h6>
           </div>
-          <h2>Why Borrowers Trust Rapid Loan 24/7</h2><br></br>
+          <h2>Why Borrowers Trust Speedy Loan 24/7</h2><br></br>
           <p  className="section_subtitle">
           We’re built for speed, simplicity, and peace of mind. Our platform is designed to help everyday borrowers access loans without unnecessary complications.
           </p>

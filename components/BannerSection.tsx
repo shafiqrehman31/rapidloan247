@@ -11,7 +11,7 @@ export default function BannerSection() {
               data-aos-duration="500"
             >
               <div className="tag_text">
-                <h6>Rapid Loan 24/7</h6>
+                <h6>Speedy Loan 24/7</h6>
               </div>
               <h1>
                 Loans Available <br />
