@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function BannerSection() {
   return (
     <section className="banner_style_two">
@@ -24,12 +25,15 @@ export default function BannerSection() {
                 <form action="/contact" method="post" className="subscribe-form">
                   <div className="form-group">
                     <input type="email" name="email" placeholder="Enter your email" />
-                    <button type="submit" className="btn_style_one">
-                      Get Loan
-                    </button>
+                    
+                    <div className="link-btn">
+                <Link href="/contact" className="btn_style_one">Get Loan</Link>
+              </div>
                   </div>
                 </form>
+
               </div>
+
             </div>
           </div>
           
