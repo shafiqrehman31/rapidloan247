@@ -33,8 +33,7 @@ export default function Footer() {
                   </Link>
                 </figure>
                 <p>
-                  The future is fast approaching, and the consumer industry is on 
-                  the precipice of dramatic change
+                  Financial Support, Right When You Need It
                 </p>
                 <ul className="social-links">
                   <li><Link href="#"><i className="icon-43"></i></Link></li>
@@ -96,7 +95,7 @@ export default function Footer() {
                     Email: <Link href="mailto:info@speedyloan247.com">Info@speedyloan247.com</Link> <br></br>
                 <p>
                 <br></br>
-                  Speedy Loan 24/7 is a trading style of Name Limited company registered in name and name.
+                  {/*Speedy Loan 24/7 is a trading style of Name Limited company registered in name and name.*/}
                 </p>
                 </div>
               </div>

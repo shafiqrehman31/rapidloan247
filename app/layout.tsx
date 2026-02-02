@@ -18,7 +18,7 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  title: 'RapidLoan24/7 – Fast, Secure & Instant Online Loans',
+  title: 'SpeedyLoan24/7 – Fast, Secure & Instant Online Loans',
   description:
     'RapidLoan24/7 offers fast, secure, and hassle-free online loans. Apply 24/7 for instant approval, flexible repayment options, and trusted financial solutions.',
   keywords: [

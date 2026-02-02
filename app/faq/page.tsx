@@ -25,7 +25,7 @@ export default function FAQPage() {
     {
       id: 2,
       question: 'What type of loan do you offer?',
-      answer: 'Lorem ipsum dolor sit amet consectetur. Ut parturient at volutpat dolor nunc cursus at rhoncus. Quis sit id tempus aliquam. Mauris felis purus morbi facilisis. Ullamcorper id consectetur ultricies nunc nunc enim accumsan porttitor.',
+      answer: 'We provide unsecured loans ranging from $100 to $5,000, typically repaid in monthly installments.',
       isActive: false
     },
     {
