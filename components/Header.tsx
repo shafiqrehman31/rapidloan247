@@ -47,20 +47,58 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // FIX 1: Reset mobile menu state on route change
+  useEffect(() => {
+    closeMobileMenu();
+  }, [pathname]);
+
+  // FIX 2: Handle body overflow on mount/unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'auto';
+    const newState = !isMobileMenuOpen;
+    setIsMobileMenuOpen(newState);
+    
+    // FIX 3: Use requestAnimationFrame to ensure DOM is ready
+    requestAnimationFrame(() => {
+      document.body.style.overflow = newState ? 'hidden' : 'auto';
+    });
+    
+    // Reset dropdown state when closing
+    if (!newState) {
+      setActiveMobileDropdown(null);
+    }
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    document.body.style.overflow = 'auto';
     setActiveMobileDropdown(null);
+    
+    // FIX 4: Use setTimeout to ensure state updates before DOM manipulation
+    setTimeout(() => {
+      document.body.style.overflow = 'auto';
+    }, 50);
   };
 
   const toggleMobileDropdown = (index: number) => {
     setActiveMobileDropdown(activeMobileDropdown === index.toString() ? null : index.toString());
   };
+
+  // FIX 5: Ensure mobile menu doesn't block content
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 991 && isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMobileMenuOpen]);
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -84,7 +122,7 @@ export default function Header() {
               {/* Mobile Navigation Toggler */}
               <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
                 <div className="menu-bar">
-                  <i className="fas fa-bars"></i>
+                  <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 </div>
               </div>
               
