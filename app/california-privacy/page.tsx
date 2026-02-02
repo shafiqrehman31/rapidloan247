@@ -204,7 +204,7 @@ export default function CaliforniaPrivacyPage() {
                         <a href="mailto:contact@speedyloan247.com" className="btn_style_three">
                           Email: contact@speedyloan247.com
                         </a>
-                        <Link href="/do-not-sell" className="btn_style_four">
+                        <Link href="/before-you-apply" className="btn_style_four">
                           Do Not Sell or Share My Personal Information
                         </Link>
                       </div>
