@@ -155,7 +155,7 @@ export default function Header() {
               <ul className="contact-list">
                 <li className="contact-item">
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>Chicago 12, Melborne City, USA</span>
+                  <span>3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010, USA</span>
                 </li>
                 <li className="contact-item">
                   <i className="fas fa-phone"></i>
