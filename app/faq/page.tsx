@@ -22,51 +22,46 @@ export default function FAQPage() {
       answer: 'Speedy Loan 24/7 is an online loan service that helps users access loan options through a fast and simple application process.',
       isActive: false
     },
-    {
-      id: 2,
-      question: 'What type of loan do you offer?',
-      answer: 'We provide unsecured loans ranging from $100 to $5,000, typically repaid in monthly installments.',
-      isActive: false
-    },
+
     {
   
-      id: 3,
+      id: 2,
       question: 'How much can I borrow?',
       answer: 'Loan amounts depend on your eligibility, income, and other factors, with amounts starting at $100 and going up to $5,000.',
       isActive: false
     },
     {
-      id: 4,
+      id: 3,
       question: 'Are loans available in all states?',
       answer: 'Loan availability depends on state laws and lender participation. Options will be shown based on your location after applying.',
       isActive: false
     },
     {
-      id: 5,
+      id: 4,
       question: 'Do you check credit scores?',
       answer: 'A soft credit check may be used to display loan options, which does not affect your credit score. A hard check may occur before final approval.',
       isActive: false
     },
     {
-      id: 6,
+      id: 5,
       question: 'Can I apply with bad credit?',
       answer: 'Yes. Applications from all credit backgrounds are considered. Factors such as income and employment may also be reviewed.',
       isActive: false
     },
     {
-      id: 7,
+      id: 6,
       question: 'How fast will I receive the money?',
       answer: 'Once approved, funds are typically deposited into your bank account the same day or the next business day.',
       isActive: false
     },
     {
-      id: 8,
+      id: 7,
       question: 'Are there any hidden fees?',
       answer: 'No. All fees and interest rates are clearly disclosed before you accept any loan offer.',
       isActive: false
     },
     {
-      id: 9,
+      id: 8,
       question: 'Can I repay early?',
       answer: 'Yes, early repayment is allowed and may help reduce overall interest costs.',
       isActive: true
