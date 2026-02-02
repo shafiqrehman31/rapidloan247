@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -15,7 +15,9 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const bodyLockRef = useRef(false);
 
   const menuItems: MenuItem[] = [
     { title: 'Home', href: '/' },
@@ -29,7 +31,10 @@ export default function Header() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  // Initialize component
   useEffect(() => {
+    setIsMounted(true);
+    
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 50) {
@@ -42,54 +47,47 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll();
     
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // FIX 1: Reset mobile menu state on route change
-  useEffect(() => {
-    closeMobileMenu();
-  }, [pathname]);
-
-  // FIX 2: Handle body overflow on mount/unmount
-  useEffect(() => {
     return () => {
-      document.body.style.overflow = 'auto';
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const toggleMobileMenu = () => {
-    const newState = !isMobileMenuOpen;
-    setIsMobileMenuOpen(newState);
-    
-    // FIX 3: Use requestAnimationFrame to ensure DOM is ready
-    requestAnimationFrame(() => {
-      document.body.style.overflow = newState ? 'hidden' : 'auto';
-    });
-    
-    // Reset dropdown state when closing
-    if (!newState) {
-      setActiveMobileDropdown(null);
-    }
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-    setActiveMobileDropdown(null);
-    
-    // FIX 4: Use setTimeout to ensure state updates before DOM manipulation
-    setTimeout(() => {
-      document.body.style.overflow = 'auto';
-    }, 50);
-  };
-
-  const toggleMobileDropdown = (index: number) => {
-    setActiveMobileDropdown(activeMobileDropdown === index.toString() ? null : index.toString());
-  };
-
-  // FIX 5: Ensure mobile menu doesn't block content
+  // Reset mobile menu on route change
   useEffect(() => {
+    if (isMounted) {
+      closeMobileMenu();
+    }
+  }, [pathname, isMounted]);
+
+  // Handle body overflow locking
+  useEffect(() => {
+    if (!isMounted) return;
+
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      bodyLockRef.current = true;
+    } else {
+      // Only unlock if we previously locked it
+      if (bodyLockRef.current) {
+        document.body.style.overflow = 'auto';
+        bodyLockRef.current = false;
+      }
+    }
+
+    return () => {
+      if (bodyLockRef.current) {
+        document.body.style.overflow = 'auto';
+        bodyLockRef.current = false;
+      }
+    };
+  }, [isMobileMenuOpen, isMounted]);
+
+  // Force close mobile menu on resize to desktop
+  useEffect(() => {
+    if (!isMounted) return;
+
     const handleResize = () => {
       if (window.innerWidth > 991 && isMobileMenuOpen) {
         closeMobileMenu();
@@ -98,7 +96,50 @@ export default function Header() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, isMounted]);
+
+  // Clean up on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+      bodyLockRef.current = false;
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    // Only update if menu is actually open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  // Prevent hydration mismatch by rendering nothing on server
+  if (!isMounted) {
+    return (
+      <header className="header">
+        <div className="main_header">
+          <div className="container">
+            <div className="main_header_inner">
+              {/* Skeleton header for SSR */}
+              <div className="main_header_logo">
+                <div className="logo-text">
+                  <span className="logo-top">SPEEDY</span>
+                  <span className="logo-bottom">
+                    <span className="loan-text">LOAN</span>
+                    <span className="hours-text">24/7</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -107,7 +148,7 @@ export default function Header() {
         <div className="container">
           <div className="main_header_inner">
             <div className="main_header_logo">
-              <Link href="/">
+              <Link href="/" onClick={closeMobileMenu}>
                 <div className="logo-text">
                   <span className="logo-top">SPEEDY</span>
                   <span className="logo-bottom">
@@ -120,18 +161,28 @@ export default function Header() {
             
             <div className="main_header_menu menu_area">
               {/* Mobile Navigation Toggler */}
-              <div className="mobile-nav-toggler" onClick={toggleMobileMenu}>
+              <button 
+                className="mobile-nav-toggler" 
+                onClick={toggleMobileMenu}
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMobileMenuOpen}
+              >
                 <div className="menu-bar">
                   <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 </div>
-              </div>
+              </button>
               
               {/* Desktop Navigation */}
               <nav className="main-menu">
                 <ul className="navigation">
                   {menuItems.map((item, index) => (
                     <li key={index} className={isMenuItemActive(item.href) ? 'active' : ''}>
-                      <Link href={item.href}>{item.title}</Link>
+                      <Link 
+                        href={item.href}
+                        onClick={closeMobileMenu}
+                      >
+                        {item.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -140,7 +191,9 @@ export default function Header() {
             
             <div className="header_right_content">
               <div className="link-btn">
-                <Link href="/contact" className="btn_style_one">Get Loan</Link>
+                <Link href="/contact" className="btn_style_one" onClick={closeMobileMenu}>
+                  Get Loan
+                </Link>
               </div>
             </div>
           </div>
@@ -148,8 +201,18 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-        <div className="menu-overlay" onClick={closeMobileMenu}></div>
+      <div 
+        ref={mobileMenuRef}
+        className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div 
+          className="menu-overlay" 
+          onClick={closeMobileMenu}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && closeMobileMenu()}
+        ></div>
         <div className="menu-container">
           <div className="menu-header">
             <div className="mobile-logo">
@@ -163,13 +226,17 @@ export default function Header() {
                 </div>
               </Link>
             </div>
-            <button className="menu-close-btn" onClick={closeMobileMenu}>
+            <button 
+              className="menu-close-btn" 
+              onClick={closeMobileMenu}
+              aria-label="Close mobile menu"
+            >
               <i className="fas fa-times"></i>
             </button>
           </div>
           
           <div className="menu-content">
-            <nav className="mobile-nav">
+            <nav className="mobile-nav" aria-label="Mobile navigation">
               <ul className="mobile-navigation">
                 {menuItems.map((item, index) => {
                   const isActive = isMenuItemActive(item.href);

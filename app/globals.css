@@ -2751,3 +2751,58 @@ section {
 .work_process_section {
     margin-top: 160px !important;
 }
+
+
+/* Ensure mobile menu is properly hidden by default */
+
+.mobile-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Prevent body scrolling when menu is open */
+
+body.menu-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Ensure overlay covers entire screen */
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.active .menu-container {
+    transform: translateX(0);
+}
