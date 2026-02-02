@@ -168,7 +168,7 @@ export default function BeforeYouApplyPage() {
                     <li><Link href="/faq">Frequently Asked Questions</Link></li>
                     <li><Link href="/terms">Terms & Conditions</Link></li>
                     <li><Link href="/privacy">Privacy Policy</Link></li>
-                    <li><Link href="/apply-now">Apply Now</Link></li>
+                    <li><Link href="/contact">Apply Now</Link></li>
                     <li><Link href="/contact">Contact Us</Link></li>
                   </ul>
                 </div>
@@ -177,7 +177,7 @@ export default function BeforeYouApplyPage() {
                 <div className="cta_box bg-blue text-white p-4 rounded">
                   <h4 className="mb-3">Ready to Apply?</h4>
                   <p className="mb-4">Make sure you understand all terms before proceeding.</p>
-                  <Link href="/apply-now" className="btn_style_one w-100 text-center">
+                  <Link href="/contact" className="btn_style_one w-100 text-center">
                     Start Application
                   </Link>
                 </div>
