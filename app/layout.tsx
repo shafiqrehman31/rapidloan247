@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import Preloader from '@/components/Preloader'
 import SearchPopup from '@/components/SearchPopup'
 import ScrollToTop from '@/components/ScrollToTop'
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -74,6 +74,7 @@ export default function RootLayout({
         <SearchPopup />
         <Header />
         {children}
+        <SpeedInsights />
         <Footer />
         
         <ScrollToTop />
