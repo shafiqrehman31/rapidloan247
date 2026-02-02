@@ -3,7 +3,7 @@ import { FooterLink } from '@/types';
 
 export default function Footer() {
   const pagesLinks: FooterLink[] = [
-    { title: 'About us', href: '/about' },
+    { title: 'About us', href: '/about-us' },
     { title: 'FAQ\'s', href: '/faq' },
     { title: 'Contact', href: '/contact' },
   ];
