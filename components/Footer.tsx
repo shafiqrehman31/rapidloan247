@@ -91,12 +91,11 @@ export default function Footer() {
 
                 <div>
                   
-                    Address: 3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010 <br></br>
+                    Address: 7 Charlotte Street, Manchester, England, M1 4DZ <br></br>
                     Email: <Link href="mailto:info@speedyloan247.com">Info@speedyloan247.com</Link> <br></br>
-                <p>
+               
                 <br></br>
-                  {/*Speedy Loan 24/7 is a trading style of Name Limited company registered in name and name.*/}
-                </p>
+                 <p> Speedy Loan 24/7 is a trading style of AYTUG LIMITED company registered in Manchester, United Kingdom.</p>
                 </div>
               </div>
             </div>

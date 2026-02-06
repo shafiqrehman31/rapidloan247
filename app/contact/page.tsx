@@ -114,7 +114,7 @@ export default function ContactPage() {
                 <div className="contact_block_icon"><i className="icon-3" style={{color: '#4a6cf7', fontSize: '50px'}}></i></div>
                 <div className="contact_block_title"><h4 style={{color: '#222'}}>Our Location</h4></div>
                 <div className="contact_block_text">
-                  <p style={{color: '#555', margin: 0}}>3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010</p>
+                  <p style={{color: '#555', margin: 0}}>7 Charlotte Street, Manchester, England, M1 4DZ</p>
                 </div>
               </div>
             </div>

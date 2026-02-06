@@ -260,14 +260,9 @@ export default function Header() {
               <ul className="contact-list">
                 <li className="contact-item">
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>3680 Wilshire Blvd Ste P04 Los Angeles, CA 90010, USA</span>
+                  <span>7 Charlotte Street, Manchester, England, M1 4DZ</span>
                 </li>
-                <li className="contact-item">
-                  <i className="fas fa-phone"></i>
-                  <Link href="tel:+8801682648101" onClick={closeMobileMenu}>
-                    +88 01682648101
-                  </Link>
-                </li>
+            
                 <li className="contact-item">
                   <i className="fas fa-envelope"></i>
                   <Link href="mailto:contact@speedyloan247.com" onClick={closeMobileMenu}>
