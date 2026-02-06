@@ -95,7 +95,7 @@ export default function Footer() {
                     Email: <Link href="mailto:info@speedyloan247.com">Info@speedyloan247.com</Link> <br></br>
                
                 <br></br>
-                 <p> Speedy Loan 24/7 is a trading style of AYTUG LIMITED company registered in Manchester, United Kingdom.</p>
+                 <p> Speedy Loan 24/7 is a trading style of AYTUG LIMITED Company.</p>
                 </div>
               </div>
             </div>
